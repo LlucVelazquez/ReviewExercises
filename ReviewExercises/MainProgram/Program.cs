@@ -14,7 +14,7 @@ namespace MainProgram
         public static int ValidarNum(string input)
         {
             int num = 0;
-            try
+            try 
             {
                 num = int.Parse(input);
             } catch (Exception e)
