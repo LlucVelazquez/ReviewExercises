@@ -1,11 +1,27 @@
 ﻿using MyLibrary;
+using System.ComponentModel.DataAnnotations;
 namespace MainProgram
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            const string Msg= "Introdueix un numero";
+            Console.WriteLine(Msg);
+            int sec = ValidarNum(Console.ReadLine());
+            Console.WriteLine(MyLibrary.Math.SecondToText(sec));
+        }
+        public static int ValidarNum(string input)
+        {
+            int num = 0;
+            try
+            {
+                num = int.Parse(input);
+            } catch (Exception e)
+            {
+                throw new Exception("Error inesperat", e);
+            }
+            return num;
         }
     }
 }
