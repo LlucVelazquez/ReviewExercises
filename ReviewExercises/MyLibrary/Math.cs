@@ -1,6 +1,6 @@
 ﻿namespace MyLibrary
 {
-    public class Math
+    public static class Math
     {
         public static string SecondToText(int sec)
         {
