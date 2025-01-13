@@ -3,9 +3,14 @@ namespace MainProgram
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            const string Msg = "Introdueix la temperatura en Celsius: ";
+            float celsius, kelvin;
+            Console.WriteLine(Msg);
+            celsius = float.Parse(Console.ReadLine());
+            kelvin = MyLibrary.Math.CelsiusToKelvin(celsius);
+            Console.WriteLine(kelvin);
         }
     }
 }
