@@ -12,7 +12,7 @@ namespace MainProgram
             baseTriangle = float.Parse(Console.ReadLine());
             Console.Write(MsgAlt);
             alturaTriangle = float.Parse(Console.ReadLine());
-            areaTriangle = baseTriangle * alturaTriangle / 2;
+            areaTriangle = MyLibrary.Math.AreaTriangle(baseTriangle, alturaTriangle);
             Console.Write(areaTriangle);
         }
     }
