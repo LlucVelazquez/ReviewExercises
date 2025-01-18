@@ -1,10 +1,10 @@
 ﻿namespace MyLibrary
 {
-    public static class Math
+    public class Math
     {
         public static float CalculateDiscount (float preu,  float preuDescompte)
         {
-            return (preuDescompte * 100) / preu;
+            return preuDescompte * 100 / preu;
         }
     }
 }

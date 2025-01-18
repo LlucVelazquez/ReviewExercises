@@ -9,21 +9,21 @@ namespace MainProgram
             const string MsgPreuDescompte = "Introdueix el preu amb descompte: ";
             float preu = 0;
             float preuDescompte = 0;
-            float descompte;
+            float descompte = 0;
             LoopNum(MsgPreu, preu);
             LoopNum(MsgPreuDescompte, preuDescompte);
             descompte = MyLibrary.Math.CalculateDiscount(preu, preuDescompte);
-            Console.WriteLine(descompte);
+            Console.WriteLine($"{descompte} %");
 
         }
-        public static void LoopNum(string Msg, float num)
+        public static void LoopNum(string Msg, float num1)
         {
             bool flag = true;
             while (flag)
             {
                 Console.WriteLine(Msg);
-                num = ValidateNum(Console.ReadLine());
-                if (num != 0)
+                num1 = ValidateNum(Console.ReadLine());
+                if (num1 != 0)
                 {
                     flag = false;
                 }
